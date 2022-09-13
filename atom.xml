@@ -6,7 +6,7 @@
   <link href="http://sjhfuigashgrs.github.io/atom.xml" rel="self"/>
   
   <link href="http://sjhfuigashgrs.github.io/"/>
-  <updated>2022-09-12T16:56:52.398Z</updated>
+  <updated>2022-09-13T11:27:43.880Z</updated>
   <id>http://sjhfuigashgrs.github.io/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>Hello World</title>
     <link href="http://sjhfuigashgrs.github.io/posts/3eeb.html"/>
     <id>http://sjhfuigashgrs.github.io/posts/3eeb.html</id>
-    <published>2022-09-12T16:56:52.398Z</published>
-    <updated>2022-09-12T16:56:52.398Z</updated>
+    <published>2022-09-13T11:27:43.880Z</published>
+    <updated>2022-09-13T11:27:43.880Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>HelloWorld</p></blockquote><div class="tip "><p>default</p></div><p><br /></p><!-- <div align=center class="aspect-ratio">  <iframe src="https://player.bilibili.com/player.html?aid=1523405672&&page=1&as_wide=1&high_quality=1&danmaku=0"  scrolling="no"  border="0"  frameborder="no"  framespacing="0"  high_quality=1  danmaku=1  allowfullscreen="true">  </iframe></div> -->]]></content>
     
@@ -38,7 +38,7 @@
     <link href="http://sjhfuigashgrs.github.io/posts/85a2.html"/>
     <id>http://sjhfuigashgrs.github.io/posts/85a2.html</id>
     <published>2022-09-02T15:43:32.000Z</published>
-    <updated>2022-09-12T16:56:52.398Z</updated>
+    <updated>2022-09-13T11:27:43.880Z</updated>
     
     <content type="html"><![CDATA[<p><strong>IE6/IE7 不支持 first-child 的解决办法</strong></p><p><strong><em>不废话,上代码！</em></strong></p><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#sidebar</span> <span class="selector-tag">li</span><span class="selector-pseudo">:first</span>-child &#123;</span><br><span class="line">    <span class="attribute">border-top-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#sidebar</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">border-top-width</span>: <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">border-top-style</span>: solid;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#dad3d0</span>;</span><br><span class="line">    *<span class="attribute">border-top-style</span>: <span class="built_in">expression</span>(this.previousSibling == null ? <span class="string">&#x27;none&#x27;</span>: <span class="string">&#x27;solid&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p><strong>给你们科普一下 (๑•̀ㅂ•́)و✧）</strong></p></blockquote><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">previousSibling</span>; <span class="comment">// 可以获取到元素的兄节点，如果不存在兄节点，就说明这个元素为第一个节点。而expression是css表达式，可以理解为在css里可以书写javascript语句，那么</span></span><br><span class="line"><span class="title function_">expression</span>(<span class="variable language_">this</span>.<span class="property">previousSibling</span> == <span class="literal">null</span> ? <span class="string">&#x27;none&#x27;</span> : <span class="string">&#x27;solid&#x27;</span>); <span class="comment">// 的意思是，如果这个元素没有兄节点（也就是它是第一个节点），返回none，否则返回solid</span></span><br></pre></td></tr></table></figure><p><em>只有 IE6 和 IE7 能识别此行代码</em></p>]]></content>
     
@@ -59,7 +59,7 @@
     <link href="http://sjhfuigashgrs.github.io/posts/5c18.html"/>
     <id>http://sjhfuigashgrs.github.io/posts/5c18.html</id>
     <published>2022-09-02T15:37:31.000Z</published>
-    <updated>2022-09-12T16:56:52.398Z</updated>
+    <updated>2022-09-13T11:27:43.880Z</updated>
     
     <content type="html"><![CDATA[<p><em>正如大多数框架一样，<code>Mybatis</code> 框架也提供了缓存！</em></p><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p><code>Mybatis</code> 框架的缓存分为两个级别。</p><h3 id="一级缓存"><a href="#一级缓存" class="headerlink" title="一级缓存"></a>一级缓存</h3><blockquote><p><strong><code>Mybatis</code> 框架的一级缓存是默认是开启的。</strong></p></blockquote><p><code>Mybatis</code> 框架的一级缓存是基于 <code>PerpetualCache</code> 的 <code>HashMap</code> 本地缓存，默认是 <strong>SqlSession</strong> 级别的缓存，在 <strong>SqlSession</strong> 的生命周期内有效。当 <strong>SqlSession</strong> 关闭后，该 <strong>SqlSession</strong> 中所有的一级缓存会被清空。</p><h3 id="二级缓存"><a href="#二级缓存" class="headerlink" title="二级缓存"></a>二级缓存</h3><blockquote><p><strong><code>Mybatis</code> 框架的二级缓存是默认是关闭的，</strong> 使用是需要在 <code>Mybatis</code> 核心配置文件中设置开启！</p></blockquote><p>二级缓存是 <strong>SqlSessionFactory</strong> 级别的，其作用域超出 <strong>SqlSession</strong> 范围，缓存中的数据可以被所有 <strong>SqlSession</strong> 共享。</p><h2 id="二级缓存使用方法"><a href="#二级缓存使用方法" class="headerlink" title="二级缓存使用方法"></a>二级缓存使用方法</h2><p>在 <code>Mybatis</code> 框架中使用二级缓存需要一下几个环节：</p><ol><li><p>在 <code>Mybatis</code> 框架的配置文件中设置全局开启二级缓存，代码如下</p> <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">settings</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">&quot;cacheEnabled&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>即使全局开启了二级缓存，默认情况下也是不使用二级缓存的。可以根据需要在 <strong>SQL</strong> 映射文件中（*Mapper.xml）中配置缓存，为当前 <strong>namespace</strong> 启用二级缓存，代码如下：</p> <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">&quot;com.k.dao.sysUser.SysUserMapper&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 缓存配置 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">cache</span></span></span><br><span class="line"><span class="tag">    <span class="attr">eviction</span>=<span class="string">&quot;FIFO&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">flushInterval</span>=<span class="string">&quot;60000&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">size</span>=<span class="string">&quot;512&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">readOnly</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure><p> <strong>cache</strong> 元素中各种属性的作用介绍：</p><ul><li><strong>eviction</strong>：选择缓存回收策略，主要包括以下几种策略：<ul><li><strong>LRU</strong>：这是默认选项，最近最少回收，移除最长时间不被使用的缓存对象。</li><li><strong>FIFO：</strong>先进先出，按照对象进入缓存的顺序来移除它们。</li><li><strong>SOFT：</strong>软引用，移除基于垃圾回收器状态和软引用规则的对象。</li><li><strong>WEAK：</strong>弱引用，更积极地一出基于垃圾回收器和弱引用规则的对象。</li></ul></li><li><strong>flushInterval</strong>：设定缓存刷新间隔，以毫秒（ms）为单位设定缓存多长时间自动刷新一次，默认不自动刷新。</li><li><strong>size：</strong>设定缓存中最多存放多少个对象，默认是 1024.</li><li><strong>readOnly：</strong>设定缓存数据是否只读。默认是 <em>false</em> ，表示缓存数据会用于读写操作，<code>Mybatis</code> 框架会返回缓存的副本以避免脏读；<em>true</em> 表示缓存数据只会用于读操作，<code>Mybatis</code> 框架会为所有从缓存中获取数据的操作返回缓存对象得实例，以获得更好的性能。</li></ul></li><li><p>在 SQL 映射文件中配置支持二级缓存后，如需对个别查询进行调整，可以在 <code>select</code> 元素中单独设置，代码如下：</p> <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;gitUserList&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;sysuser&quot;</span> <span class="attr">useCache</span>=<span class="string">&quot;false&quot;</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ol><blockquote><p><strong>TIP</strong></p><p><code>Mybatis</code> 的核心是 SQL 管理，缓存并不是 <code>Mybatis</code> 所擅长的，所有应该采用 <code>Redis</code> 、<code>MongoDB</code> 等更专业的缓存技术会更加合理！</p></blockquote><p>完结撒花！</p><blockquote><p><strong>技术有限，如有错误，还请多多指教，谢谢！！！</strong></p></blockquote>]]></content>
     
@@ -84,7 +84,7 @@
     <link href="http://sjhfuigashgrs.github.io/posts/b427.html"/>
     <id>http://sjhfuigashgrs.github.io/posts/b427.html</id>
     <published>2022-08-30T23:53:05.000Z</published>
-    <updated>2022-09-12T16:56:52.398Z</updated>
+    <updated>2022-09-13T11:27:43.884Z</updated>
     
     <content type="html"><![CDATA[<p><code>see</code> <a href="https://zhuanlan.zhihu.com/p/411524929">https://zhuanlan.zhihu.com/p/411524929</a></p><blockquote><p>验证是否登录</p></blockquote><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm whoami</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -105,7 +105,7 @@
     <link href="http://sjhfuigashgrs.github.io/posts/18ac.html"/>
     <id>http://sjhfuigashgrs.github.io/posts/18ac.html</id>
     <published>2022-08-30T00:42:46.000Z</published>
-    <updated>2022-09-12T16:56:52.398Z</updated>
+    <updated>2022-09-13T11:27:43.880Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>添加 <a href="[Add Blog Animation -- Wowjs | Akilar の糖果屋](https://akilar.top/posts/abab51cf/">wowjs 特效</a><br>see <a href="https://www.npmjs.com/package/hexo-butterfly-wowjs">https://www.npmjs.com/package/hexo-butterfly-wowjs</a></p></blockquote><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-butterfly-wowjs --save</span><br></pre></td></tr></table></figure><p>添加配置项</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># wowjs</span><br><span class="line"># see https://www.npmjs.com/package/hexo-butterfly-wowjs</span><br><span class="line">wowjs:</span><br><span class="line">  enable: true #控制动画开关。true是打开，false是关闭</span><br><span class="line">  priority: 10 #过滤器优先级</span><br><span class="line">  mobile: false #移动端是否启用，默认移动端禁用</span><br><span class="line">  animateitem:</span><br><span class="line">    - class: recent-post-item #必填项，需要添加动画的元素的class</span><br><span class="line">      style: animate__zoomIn #必填项，需要添加的动画</span><br><span class="line">      duration: 1.5s #选填项，动画持续时间，单位可以是ms也可以是s。例如3s，700ms。</span><br><span class="line">      delay: 200ms #选填项，动画开始的延迟时间，单位可以是ms也可以是s。例如3s，700ms。</span><br><span class="line">      offset: 30 #选填项，开始动画的距离（相对浏览器底部）</span><br><span class="line">      iteration: 1 #选填项，动画重复的次数</span><br><span class="line">    - class: card-widget</span><br><span class="line">      style: animate__zoomIn</span><br><span class="line">      delay: 200ms</span><br><span class="line">    # - class: flink-list-card</span><br><span class="line">    #   style: wowpanels</span><br><span class="line">    - class: flink-list-card</span><br><span class="line">      style: animate__flipInY</span><br><span class="line">      duration: 3s</span><br><span class="line">    - class: flink-list-card</span><br><span class="line">      style: animate__animated</span><br><span class="line">      duration: 3s</span><br><span class="line">    - class: article-sort-item</span><br><span class="line">      style: animate__slideInRight</span><br><span class="line">      duration: 1.5s</span><br><span class="line">    - class: site-card</span><br><span class="line">      style: animate__flipInY</span><br><span class="line">      duration: 3s</span><br><span class="line">    - class: site-card</span><br><span class="line">      style: animate__animated</span><br><span class="line">      duration: 3s</span><br><span class="line">  animate_css: https://cdn.cbd.int/hexo-butterfly-wowjs/lib/animate.min.css</span><br><span class="line">  wow_js: https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow.min.js</span><br><span class="line">  wow_init_js: https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow_init.js</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -130,7 +130,7 @@
     <link href="http://sjhfuigashgrs.github.io/posts/7d58.html"/>
     <id>http://sjhfuigashgrs.github.io/posts/7d58.html</id>
     <published>2022-08-30T00:04:13.000Z</published>
-    <updated>2022-09-12T16:56:52.398Z</updated>
+    <updated>2022-09-13T11:27:43.880Z</updated>
     
     <content type="html"><![CDATA[<ul><li>彩色文字<br>在一段话中方便插入各种颜色的标签，包括：<p class='p red'>红色</p>、<p class='p yellow'>黄色</p>、<p class='p green'>绿色</p>、<p class='p cyan'>青色</p>、<p class='p blue'>蓝色</p>、<p class='p gray'>灰色</p>。</li><li>超大号文字<br>文档「开始」页面中的标题部分就是超大号文字。<p class='p center logo large'>Volantis</p><p class='p center small'>A Wonderful Theme for Hexo</p><br /><div class="tip "><p>default</p></div><div class="tip info"><p>info</p></div><div class="tip success"><p>success</p></div><div class="tip error"><p>error</p></div><div class="tip warning"><p>warning</p></div><div class="tip bolt"><p>bolt</p></div><div class="tip ban"><p>ban</p></div><div class="tip home"><p>home</p></div><div class="tip sync"><p>sync</p></div><div class="tip cogs"><p>cogs</p></div><div class="tip key"><p>key</p></div><div class="tip bell"><p>bell</p></div><div class="tip fa-atom"><p>自定义 font awesome 图标</p></div><br /><div class="tag link"><a class="link-card" title="糖果屋教程贴" href="https://akilar.top/posts/615e2dec/"><div class="left"><img src="https://cdn.cbd.int/akilar-candyassets@1.0.36/image/siteicon/favicon.ico"/></div><div class="right"><p class="text">糖果屋教程贴</p><p class="url">https://akilar.top/posts/615e2dec/</p></div></a></div><br /><div class="tip warning faa-horizontal animated"><p>warning</p></div><div class="tip ban faa-flash animated"><p>ban</p></div><div class="tip warning faa-horizontal animated-hover"><p>warning</p></div><div class="tip ban faa-flash animated-hover"><p>ban</p></div></li></ul>]]></content>
     
@@ -155,7 +155,7 @@
     <link href="http://sjhfuigashgrs.github.io/posts/2753.html"/>
     <id>http://sjhfuigashgrs.github.io/posts/2753.html</id>
     <published>2022-08-29T23:51:06.000Z</published>
-    <updated>2022-09-12T16:56:52.398Z</updated>
+    <updated>2022-09-13T11:27:43.880Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p><strong>活着本身就是一种勇气</strong></p></blockquote><p>之前看董宇辉的直播推荐了余华老师的活着 我就买了一本阅读了一下</p><p><img src="https://www.gpdf.net/wp-content/uploads/2021/01/s29652928.jpg" alt=""></p><p>我花了一晚上的时间阅读了一遍 虽说读的很快，但是我读完之后内心真想呐喊一遍，因为富贵太惨了，真的是人生四大悲</p><p>少年丧父母，中年丧配偶，老年丧独子，少子无良师。</p><p>故事的主人公叫福贵，是个地主家的公子哥，谈不上真傻，我认为他是作，喜欢赌博 并输光了家产，然后他爹也被气死了，老婆也被接回了娘家，输光家产后福贵就变的本分起来，最后媳妇也回到他身边，本来想好好生活的。好景不长，晚上去诊所给他娘拿药的时候被国民党抓了壮丁，历经曲折回了家。回到家后他母亲去世了 女儿也因为一场病变成了哑巴，也是一家四口团圆了。之后就土地革命 ，因为福贵输光了家产被定了贫农 也分到了地，日子也好点了，在那个大锅饭时代，也经常挨饿，有一次因为县长夫人生孩子大出血需要输血，无量医生为了巴结县长，吧有庆的血抽干了 有庆也死了，福贵亲手把儿子给埋了，也没敢告诉得了软骨病的家珍。他凤霞因为生孩子大出血，孩子保住了，但是凤霞确走了。苦根生下来就没有母亲，最后苦根的父亲也在搬货的时候被砸死了，苦根就跟着福贵生活，有一次苦根生病了，福贵给苦根煮了豆子吃结果苦根被豆子噎死了，最后就剩福贵和一头牛孤苦伶仃的活着</p><ul><li>读后感</li></ul><p>福贵真的是经历了太多的苦难了，正如董宇辉老师在直播间说的 即使生活不如意，但是请你别忘记你自己有勇气去面对这一切。</p><p>也许活着的生命意义是珍惜，也是一种勇气。</p>]]></content>
     
@@ -181,7 +181,7 @@
     <link href="http://sjhfuigashgrs.github.io/posts/b417.html"/>
     <id>http://sjhfuigashgrs.github.io/posts/b417.html</id>
     <published>2022-08-29T23:38:59.000Z</published>
-    <updated>2022-09-12T16:56:52.398Z</updated>
+    <updated>2022-09-13T11:27:43.880Z</updated>
     
     <content type="html"><![CDATA[<h1 id="夏至"><a href="#夏至" class="headerlink" title="夏至"></a>夏至</h1><blockquote><p>一生的时间很短<br>  短到不过是两颗心之间的距离<br>  一生的时间也很长<br>  不如我们试着走走看</p></blockquote>]]></content>
     
