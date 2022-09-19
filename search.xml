@@ -33,6 +33,8 @@
       
         <tags>
             
+            <tag> 技术相关 </tag>
+            
             <tag> 随笔 </tag>
             
         </tags>
@@ -234,7 +236,7 @@
       <link href="/js/up_progress.js"/>
       <url>/js/up_progress.js</url>
       
-        <content type="html"><![CDATA[/* * @Description: 返回顶部 显示网页阅读进度 * @version:  * @Author: king * @Date: 2022-09-13 14:33:27 * @LastEditors: king * @LastEditTime: 2022-09-13 14:46:11 */window.onscroll = percent;// 执行函数// 页面百分比function percent() {    let a = document.documentElement.scrollTop, // 卷去高度        b = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight) - document.documentElement.clientHeight, // 整个网页高度 减去 可视高度        result = Math.round(a / b * 100), // 计算百分比        btn = document.querySelector("#percent"); // 获取图标        result<=99||(result=99),btn.innerHTML=result}document.getElementById("page-name").innerText=document.title.split(" | king")[0];]]></content>
+        <content type="html"><![CDATA[/* * @Description: 返回顶部 显示网页阅读进度 * @version:  * @Author: king * @Date: 2022-09-13 14:33:27 * @LastEditors: king * @LastEditTime: 2022-09-16 00:40:15 */window.onscroll = percent;// 执行函数// 页面百分比function percent() {    let a = document.documentElement.scrollTop, // 卷去高度        b = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight) - document.documentElement.clientHeight, // 整个网页高度 减去 可视高度        result = Math.round(a / b * 100), // 计算百分比        btn = document.querySelector("#percent"); // 获取图标        result<=99||(result=99),btn.innerHTML=result}document.getElementById("page-name").innerText=document.title.split(" | king")[0];]]></content>
       
     </entry>
     
@@ -312,6 +314,17 @@
       <url>/js/src/crash_cheat.js</url>
       
         <content type="html"><![CDATA[//动态标题var OriginTitile = document.title;var titleTime;document.addEventListener('visibilitychange', function () {  if (document.hidden) {    //离开当前页面时标签显示内容    document.title = 'w(ﾟДﾟ)w 不要走！再看看嘛！';    clearTimeout(titleTime);  } else {    //返回当前页面时标签显示内容    document.title = '♪(^∇^*)欢迎肥来！' + OriginTitile;    //两秒后变回正常标题    titleTime = setTimeout(function () {      document.title = OriginTitile;    }, 2000);  }});]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/src/custom.js"/>
+      <url>/js/src/custom.js</url>
+      
+        <content type="html"><![CDATA[/* * @Description: custom js * @version:  * @Author: king * @Date: 2022-09-16 00:49:50 * @LastEditors: king * @LastEditTime: 2022-09-19 09:05:35 */var flag;// 隐藏分页按钮function pagination_hidden(){     let p_father = document.getElementById('pagination');    let count = p_father.getElementsByTagName('a').length;    // 如果分页只有一页就隐藏    if(count < 1){         p_father.style.display = "none";    }}// 判断浏览器是否支持onhashchange事件if (('onhashchange' in window) && ((typeof document.documentMode === 'undefined') || document.documentMode == 8)) {    // 浏览器支持onhashchange事件    window.onhashchange = pagination_hidden();  // TODO，对应新的hash执行的操作函数} else {    // 如浏览器不支持onhashchange事件，则用定时器检测的办法    /* setInterval( () => {        // isHashChanged() 为要检测url是否被改变的函数        var ischanged = isHashChanged();        console.log(ischanged);        if (ischanged) {            pagination_hidden(); //如被改变，设用函数        }    }, 150); */    alert("该浏览器不支持 `onhashchange` 事件");}window.addEventListener('popstate', function(event) {    console.log(event);    console.log("popstate");     pagination_hidden();});/*     但是，history.pushState()和history.replaceState()不会触发popstate事件，所以需要自己手动增加事件        history.replaceState和pushState不会触发popstate事件，那么如何监听这两个行为呢。可以通过在方法里面主动的去触发popstate事件。另一种就是在方法中创建一个新的全局事件。*/const _historyWrap = function(type) {  const orig = history[type];  const e = new Event(type);  return function() {    const rv = orig.apply(this, arguments);    e.arguments = arguments;    window.dispatchEvent(e);    return rv;  };};history.pushState = _historyWrap('pushState');history.replaceState = _historyWrap('replaceState');window.addEventListener('pushState', function(e) {  console.log('change pushState');   if(flag){     pagination_hidden();  }  flag = true;});window.addEventListener('replaceState', function(e) {  console.log('change replaceState');  if(!flag){     pagination_hidden();  }  flag = false;});]]></content>
       
     </entry>
     
